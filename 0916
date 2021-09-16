@@ -14,3 +14,9 @@ Stream :
 ③SfDataCollectBizImpl.java中判断emp字段userId和isPrimary的值并调用set方法添加所需内容。
 
 
+Stream : 
+①数据库OBM_EMP_INFO表添加CARDTYPE、NATIONALID、AGE三个字段 
+②对应entity和vo包下对应添加 
+③SfDataCollectBizImpl.java中判断emp字段userId和isPrimary的值并调用set方法添加所需内容。
+
+
