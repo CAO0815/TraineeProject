@@ -1,0 +1,53 @@
+1、	所有字段，只修改了加emp前缀的部分，其他前缀的均未修改（都需要改，多张表使用）
+2、	Excel字段
+ 
+ 
+ 
+3、	大表缺失项
+ 
+外加：candidateName、certificateType、certificateNo、reportDate、effectiveDate、travelPath、vaccination、nucleicAcidCertificate、healthCode、workPlace、clothesIsgrant、articlesIsgrant、handleMobileTime、aboardSite、otherCityName、isUploadCompetitionAgreement、roommate、houseBj、dormitoryType、appStep
+4、	重复字段
+ 
+empDepartment
+5、	未修改项
+ 
+复查：相同字段，不同表格。覆盖错误，待修改
+
+9.13  gating。。。。
+注意点：emp前缀以前端代码为准，dicText后缀去掉，，每个实体字段顺序以显示页面顺序为准，（一个字段三行代码…….）
+
+
+数据来源：ViObmEimInfoVO和ObmIngrationInfoVO
+共建 11个
+
+1、	字段名全部根据网页显示来的
+2、	 value和description未填写
+ 
+3、	含？字段已加注释中，部分缺失
+
+
+4、“操作”字段缺失的有：AdminConfirmExportVO、HealthCenterExportVO、IEConfirmExportVO、SecurityConfirmExportVO、SSCConfirmExportVO 注释已加
+
+AdminConfirmExportVO缺“是否配发办公用品” 注释已加
+SecurityConfirmExportVO缺失“是否发放工卡”，“是否发放厂牌”  注释已加
+ITConfirmExportVO缺失“办理手机时间？”  注释已加
+LegalConfirmExportVO缺失“是否上传竞业限制协议”  注释已加
+
+网页端缺失“SSC已办查询”，不显示，遂未创建
+职位生成有页面，前端代码无字段
+
+4、	所属公司==集团公司
+
+5、	ITConfirmExportVO实体，工作地和办公点变量名重复，“办公点”已注释 Resolved!
+
+6、	SSCConfirmExportVO参照前端的，网页刷不出来  不做
+
+
+
+Review Point：emp前缀检查  ！！
+正则全转小写不可行：变量名jobCustomstring2、hasHouse、dormitoryConfirm等 含大写字母且不可转为小写
+
+Review Reason：1、变量名需与前端代码中严格一致
+               2、查看前端代码title和key值，后端vo实体与其一致
+
+Reviewed：AdminConfirmExportVO
