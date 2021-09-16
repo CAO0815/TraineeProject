@@ -1,0 +1,16 @@
+
+
+1、com.cxmt.modules->obm->business->impl->SfDataCollectBizImpl.java
+
+
+
+
+@Autowired 是一个注释，它可以对类成员变量、方法及构造函数进行标注，让 spring 完成 bean 自动装配的工作。
+@Autowired 默认是按照类去匹配，配合 @Qualifier 指定按照名称去装配 bean。
+
+Stream : 
+①数据库OBM_EMP_INFO表添加CARDTYPE、NATIONALID、AGE三个字段 
+②对应entity和vo包下对应添加 
+③SfDataCollectBizImpl.java中判断emp字段userId和isPrimary的值并调用set方法添加所需内容。
+
+
